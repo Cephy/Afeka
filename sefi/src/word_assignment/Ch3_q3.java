@@ -13,7 +13,7 @@ public class Ch3_q3 {
 		int AcquaintancesTime, sum;
 		double distance;
 				
-		System.out.println("hello, please answer the following questions in order to determine how much you should pay for the weeding \n"
+		System.out.println("hello, please answer the following questions in order to determine how much you should pay for the weeding\n"
 				           +"would you consider yourself close with the lucky couple? ");
 		friends = s.next().charAt(0);
 		if (friends == 'y') sum = FRIENDS_PRICE;	
