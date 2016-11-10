@@ -10,9 +10,11 @@ public class Ch1_q1 {
 			double radius;
 			final double PAI = 3.14159;
 			final int FACTOR = 2;		
-			System.out.println("what is the radius of the circle? \n");
+			
+			System.out.println("Please enter the radius of the circle? \n");
 			radius = s.nextDouble();
-			System.out.println("the circumference of the circle is: \n" + (radius*FACTOR*PAI) + "\nand it's surface is: \n" + (radius*radius*PAI));
+			System.out.println("The circumference the circle you entered is: \n" + (radius*FACTOR*PAI) + 
+							   "\nThe surface of the circle is: \n" + (radius*radius*PAI));
 		
 		}
 
