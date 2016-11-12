@@ -13,30 +13,31 @@ public class Ch3_q3 {
 		int AcquaintancesTime, sum;
 		double distance;
 				
-		System.out.println("please answer the following questions in order to determine how much you should pay for the weeding\n"
-				           +"would you consider yourself close with the lucky couple? ");
-		friends = s.next().charAt(0);
-		if (friends == 'y') sum = FRIENDS_PRICE;	
+		System.out.println("please answer the following questions with a yes or no in order to determine how much you should pay for the weeding\n\n"
+				           +"are you familly related to the couple? ");
+		familly = s.next().charAt(0);
+		if (familly == 'y') sum = FAMILLY_PRICE;	
 		
 		else {
-			System.out.println("are you and one of the lucky couple's familly? ");
-			familly = s.next().charAt(0);
-		
-			if (familly == 'y') sum = FAMILLY_PRICE; 
+			System.out.println("would you consider yourself close with the lucky couple? ");
+			friends = s.next().charAt(0);
+			
+			if (friends == 'y')  sum = FRIENDS_PRICE; 
 			
 			else sum = BASE;
-			}
-		
-		if (familly == 'n' || friends == 'y') {
 			
-			System.out.println("for how many years have you known the lucky couple?");
-			AcquaintancesTime = s.nextInt();
-			if (AcquaintancesTime > TIME_FACTOR) {sum += PRICE_TIME_FACTOR;			
-			}
 			
-			System.out.println("how many hours will it take you to drive to the wedding? ");
-			distance = s.nextDouble();
-			if (distance > DISTANCE_FACTOR) sum -= PRICE_DISTANCE_FACTOR;
+			if (familly == 'n' || friends == 'y') {
+				
+				System.out.println("for how many years have you known the lucky couple?");
+				AcquaintancesTime = s.nextInt();
+				if (AcquaintancesTime > TIME_FACTOR) {sum += PRICE_TIME_FACTOR;			
+				}
+				
+				System.out.println("how many hours will it take you to drive to the wedding? ");
+				distance = s.nextDouble();
+				if (distance > DISTANCE_FACTOR) sum -= PRICE_DISTANCE_FACTOR;
+			}
 		}
 		System.out.println("we recomande you to pay: " + sum + " nis");
 	}

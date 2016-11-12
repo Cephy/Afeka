@@ -13,12 +13,14 @@ public class Ch1_q2 {
 			int CheapToppingsNum;
 			int ExpensiveToppingsNum;
 			
-			System.out.println("hello sir, how many deluxe, delicious toppings whould you like in your tost? ");
+			System.out.println("Hello sir, how many deluxe, delicious toppings whould you like in your tost? ");
 			ExpensiveToppingsNum = s.nextInt();
-			System.out.println("how many cheap distastful toppinng whould you like to have on your Tost?");
+			System.out.println("How many regular toppinng whould you like to have in your tost?");
 			CheapToppingsNum = s.nextInt();
-			System.out.println("the total price of your amazing Tost is: "
-							  + (BASIC_PRICE+(CHEAP_TOPPINGS*CheapToppingsNum)+(EXPENSIVE_TOPPINGS*ExpensiveToppingsNum)));
+			System.out.println("The total price of your amazing Tost is: "
+							  + (BASIC_PRICE+(CHEAP_TOPPINGS*CheapToppingsNum)+(EXPENSIVE_TOPPINGS*ExpensiveToppingsNum)) + "NIS\n" 
+							  + BASIC_PRICE + "NIS for the tost and " 
+							  + ((CHEAP_TOPPINGS*CheapToppingsNum)+(EXPENSIVE_TOPPINGS*ExpensiveToppingsNum)) + "NIS for the toppings.");
 		  
 			
 

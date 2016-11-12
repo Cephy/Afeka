@@ -12,16 +12,16 @@ public class Ch1_q3 {
 			double distance,weight,price;
 			int floor;
 			
-			System.out.println("hello brother, please insert the distance in kilometers to your house from the store:\n");
+			System.out.println("Hello sir, please insert the distance in kilometers to your house from the store:\n");
 			distance = s.nextDouble();
-			System.out.println("kind sir, would you please state the total weight in kilgrames of your furniture.\n");
+			System.out.println("Kind sir, would you please state the total weight in kilgrames of your furniture.\n");
 			weight = s.nextDouble();
 			System.out.println("If you jump from your appartment's window, how many floors will you fall?\n ");
 			floor = s.nextInt();
-			System.out.println("and how expensive is your new shinny new furniture?(in nis of course)\n");
+			System.out.println("Please state in NIS how expensive is your new shinny new furniture? \n");
 			price = s.nextDouble();
-			System.out.println("the price for the delivery is:\n" + ((PRICE_PER_KM*distance) + (FLOOR_WEIGHT_FACTOR*weight*floor) + (TIP*price) + price) 
-							   + "\nthis of course includes the tip for the delivery man for carring your stuff and sweating for you!");
+			System.out.println("the total price for the delivery is:\n"+((PRICE_PER_KM*distance)
+								+(FLOOR_WEIGHT_FACTOR*weight*floor)+(TIP*price)+price));
 		}
 
 }
