@@ -14,16 +14,16 @@ public class Ch3_q4 {
 		age = s.nextInt();
 		System.out.println("how many books you have at home? ");
 		NumBooks = s.nextInt();
-		if ((age > AGE_FACTOR && NumBooks >= ADULTE_BOOKS)||(age < AGE_FACTOR && NumBooks >= TEENAGER_BOOKS)){
-			System.out.println("sorry, you must returen a book in order to take an other one ");
-		}
-		System.out.println("how many days ago did you borrow your last book? ");
-		NumDays = s.nextInt();
-		if (NumDays > DAYS_FACTOR){
-			System.out.println("sorry, you have a book for more then 30 days, you "
-							   + "must returen a book in order to take an another  one");
-		}
-		System.out.println("you may borrow a book from the library ");
+		if ((age >= AGE_FACTOR && NumBooks >= ADULTE_BOOKS)||(age < AGE_FACTOR && NumBooks >= TEENAGER_BOOKS))
+			System.out.println("sorry, you must returen a book in order to take another one ");
+		else
+			System.out.println("how many days ago did you borrow your last book? ");
+			NumDays = s.nextInt();
+			if (NumDays > DAYS_FACTOR){
+				System.out.println("sorry, you have a book for more then 30 days, you "
+							   + "must returen a book in order to take an another one");
+		}	else
+				System.out.println("you may borrow a book from the library ");
 	}
 
 }
