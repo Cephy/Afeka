@@ -7,7 +7,7 @@ public class Ch3_q5 {
 	public static void main(String[] args) {
 	Scanner s = new Scanner(System.in);
 		
-		final int FINAL_GRADE_BAR = 102, SAT_TOT_BAR = 700, SAT_MATH_BAR = 145, SAT_ENGLISH_BAR = 120,
+		final int FINAL_GRADE_BAR = 102, SAT_TOT_BAR = 700, SAT_MATH_BAR = 145, SAT_ENGLISH_BAR = 120, 		//SAT = psihometri
 				  AVERAGE_BAR = 600;
 		final double AVERAGE_FACTOR = 1.2, SAT_FACTOR = 0.8;
 		int exam, SatTot, math, english; 
