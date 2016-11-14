@@ -4,16 +4,19 @@ import java.util.*;
 
 public class Ch1_q1 {
 
-		public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
+	public static void main(String[] args) {
+	Scanner s = new Scanner(System.in);
+	
+		final int AGE_FACTOR = 18;
+		int age;
 		
-			double radius;
-			final double PAI = 3.14159;
-			final int FACTOR = 2;		
-			System.out.println("what is the radius of the circle? \n");
-			radius = s.nextDouble();
-			System.out.println("the circumference of the circle is: \n" + (radius*FACTOR*PAI) + "\nand it's surface is: \n" + (radius*radius*PAI));
-		
-		}
+		System.out.println("what is your age? ");
+		age = s.nextInt();
+		if (AGE_FACTOR>age)
+			System.out.println("you are a miner");
+		else
+			System.out.println("you are an adult");
+
+	}
 
 }
