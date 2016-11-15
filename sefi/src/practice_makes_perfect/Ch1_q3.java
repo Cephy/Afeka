@@ -11,7 +11,7 @@ public class Ch1_q3 {
 	
 	System.out.println("please entre 2 numbers one after the other");
 	 
-	
+
 	}
 
 }
