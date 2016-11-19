@@ -2,7 +2,7 @@ package practice_makes_perfect.presentation3;
 
 import java.util.*;
 
-public class Ch5_q5 {
+public class Ch1_q5 {
 
 	public static void main(String[] args) {
 	Scanner s = new Scanner(System.in);
