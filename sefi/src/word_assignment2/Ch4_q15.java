@@ -31,5 +31,6 @@ public class Ch4_q15 {
 			}
 			counter++;
 			} while(SequenceBreakCounter!=SQUENCE_BREAK_POINT);
+		System.out.println(counter +" "+ (counter-1) +" "+ (counter-2));
 	}
 }

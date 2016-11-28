@@ -13,19 +13,18 @@ public class Ch4_q9 {
 		PartitionSize = s.nextInt();
  		while (num!=0){
  			InnerPartition=0;
- 			for (int i=PartitionSize ; i!=0 ; i--, num/=10 ){ //Partition inner loop
+ 			for (int i=PartitionSize ; i!=0 ; i--, num/=10 ){ 				//Partition inner loop
 				if (num!=0){
 					InnerPartition*=10;
 				}
 				InnerPartition+=num%10;
 	 		}
  			InnerPartition*=PartitionPower;
- 			for (int p=PartitionSize ; p!=0 ; p--){ //Partition power 
+ 			for (int p=PartitionSize ; p!=0 ; p--){ 						//Partition power 
 	 			PartitionPower *=10;
  			}
 			NewNumber+=InnerPartition;	
 		}
  		System.out.printf("your new number is %d" ,NewNumber);
 	}
-
 }
