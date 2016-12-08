@@ -1,4 +1,4 @@
-package word_assignment3;
+package practice_makes_perfect.practice;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class Ch5_q11 {
 		int testNumber, ColumnsComparisonCounter=0, rowComparisonCounter=0, maxcolum=0;
 		boolean noEqualsFlag = false;
 		
-		for (int rows=0 ; rows<numbers.length ; rows++){
+		for (int rows=0 ; rows<numbers.length ; rows++){			
 			for (int Columns=0 ; Columns<numbers.length ; Columns++){
 				numbers[rows][Columns] = (int)(Math.random()*10);
 			}				
@@ -19,28 +19,22 @@ public class Ch5_q11 {
 			testNumber = s.nextInt();
 		for (int Columns=0 ; Columns<numbers.length ; Columns++){
 			ColumnsComparisonCounter=0;
-			for (int rows=0 ; rows<numbers.length ; rows++){
+			for (int rows=0 ; rows<numbers.length ; rows++){		//number of times in row
 				if(testNumber==numbers[rows][Columns]){
 					ColumnsComparisonCounter++;
 				}	
 			}
-			if(ColumnsComparisonCounter>rowComparisonCounter){
+			if(ColumnsComparisonCounter>rowComparisonCounter){ 		//row comparison
+				rowComparisonCounter=ColumnsComparisonCounter;
 				maxcolum=Columns;
 				noEqualsFlag=true;
 			}
 		}
-		if (noEqualsFlag = true){
-			System.out.printf("the colum with the most equal numbers to the number you typed in is: %d \n" ,maxcolum);
+	if (noEqualsFlag = true){										//print out result
+			System.out.printf("the colum with the most equal numbers to the number you typed in is: %d \n" ,maxcolum+1);
 		}
 		else{
 			System.out.printf("The number you have entered was no match with any of the colums \n");
-		}
-		
-		for (int rows=0 ; rows<numbers.length ; rows++){
-			for (int Columns=0 ; Columns<numbers.length ; Columns++){
-				System.out.print(numbers[rows][Columns] + " ");
-			}
-		System.out.println(" ");
 		}
 	}
 }
