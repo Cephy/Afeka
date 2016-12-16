@@ -4,35 +4,49 @@ import java.util.*;
 
 public class Ch5_q19 {
 
-	public static int[] multiplyNumbers(int[] num1, int[] num2){
-		
-	}
-
-	
 	public static void main(String[] args) {
-		Scanner s = new Scanner(System.in);
-		int[] num1 = new int[4];
-		int[] num2 = new int[2];
-		int sumOfNumbers=0, digitlocationPower=1;
+		Scanner s = new Scanner(System.in);		
+		int digits1, digits2;
 		
-		System.out.printf("please a number with %d letters \n", num1.length);
+		System.out.println("please enter the number of digits in your number and then the number "
+						  + "itself one digit at a time");
+		digits1 = s.nextInt();
+		int[] num1 = new int[digits1];
 		for (int i=0 ; i<num1.length ; i++){
 			num1[i] = s.nextInt();
 		}
-		System.out.printf("please a number with %d letters \n", num2.length);
+		System.out.println("please enter the second number of digits in your second number "
+						  + "and then the number itself one digit at a time");
+		digits2 = s.nextInt();
+		int[] num2 = new int[digits2];
 		for (int i=0 ; i<num2.length ; i++){
 			num2[i] = s.nextInt();
 		}
-		for (int lowerNum=num2.length-1 ; lowerNum>=0 ; lowerNum-- ){
-			int numPower=1;
-			for (int upperNum=num1.length-1 ; upperNum>=0 ; upperNum--){
-				sumOfNumbers+=((num1[upperNum]*numPower)*(num2[lowerNum]*digitlocationPower));
-				System.out.println(sumOfNumbers);
-				numPower*=10;
-			}
-			digitlocationPower*=10;
-		System.out.println();
+		
+		int[] result = multiplyNumbers(num1,num2);
+		
+		for (int i=0 ; i<result.length ; i++){
+			System.out.print(result[i]);
 		}
-		System.out.println(sumOfNumbers);
+	}
+	public static int[] multiplyNumbers (int[] num1, int[] num2){ 
+		int digitStartLocation=0, digitLocation=0;
+		int[] result = new int [(num1.length*num2.length)];
+		
+		for (int lowerNum=num2.length-1 ; lowerNum>=0 ; lowerNum-- ){
+			digitLocation=0;
+			for (int upperNum=num1.length-1 ; upperNum>=0 ; upperNum--){
+				result[(result.length-1)-(digitStartLocation+digitLocation)] += (num1[upperNum]*num2[lowerNum])%10;
+				result[(result.length-1)-(digitStartLocation+digitLocation+1)] += (num1[upperNum]*num2[lowerNum])/10;					
+				if(result[(result.length-1)-(digitStartLocation+digitLocation)]>=10){
+					result[(result.length-1)-(digitStartLocation+digitLocation+1)]++;
+					result[(result.length-1)-(digitStartLocation+digitLocation)]%=10;
+				}
+				digitLocation++;
+			}
+			digitStartLocation++;
+		}
+		
+		return result;
 	}
 }

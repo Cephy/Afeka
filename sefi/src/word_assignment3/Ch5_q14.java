@@ -3,8 +3,8 @@ package word_assignment3;
 public class Ch5_q14 {
 
 	public static void main(String[] args) {
-		int[][] numbers = new int[6][8]; 
-		int counter=0;
+		int size = (int)((Math.random()*4)+5), counter=0;
+		int[][] numbers = new int[size][size]; 
 		
 		for (int rows=numbers[0].length-1 ; rows>=0 ; rows--){
 			int operatorSign,columnsFlag, columns;

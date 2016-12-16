@@ -71,8 +71,9 @@ public class ch6_q9 {
 					if (currentPlayer == 1) {
 						board[row - 1][col - 1] = PLAYER_1_SIGN;
 						currentPlayer = 2;
-					} else {
-						// TODO
+					} else {														//To Do (Cephy)
+						board[row - 1][col - 1] = PLAYER_2_SIGN;
+						currentPlayer = 1;
 					}
 				}
 			} while (checkGameStatus(board) == GAME_STATUS_NO_RESULT_YET);
@@ -89,11 +90,24 @@ public class ch6_q9 {
 					|| res == GAME_STATUS_WINNER_PLAYER_2)
 				return res;
 
-			// TODO: 
+			res = checkIfWinnerInCol(board);
+			if (res == GAME_STATUS_WINNER_PLAYER_1
+					|| res == GAME_STATUS_WINNER_PLAYER_2)
+				return res;													//To Do (Cephy)
+			
+			res = checkIfWinnerInMainDiagonal(board);						//To Do (Cephy)
+			if (res == GAME_STATUS_WINNER_PLAYER_1
+					|| res == GAME_STATUS_WINNER_PLAYER_2)
+				return res;	
+			
+			res = checkIfWinnerInSecondaryDiagonal(board);					//To Do (Cephy)
+			if (res == GAME_STATUS_WINNER_PLAYER_1
+					|| res == GAME_STATUS_WINNER_PLAYER_2)
+				return res;	
 
 			// if all cells are taken: TIE, else no result yet..
 			for (int i = 0; i < board.length; i++) {
-				for (int j = 0; j < board.length; j++)
+				for (int j = 0; j <  board.length; j++)
 					if (board[i][j] == NO_PLAYER)
 						return GAME_STATUS_NO_RESULT_YET;
 			}
@@ -141,20 +155,55 @@ public class ch6_q9 {
 		}
 
 		public static int checkIfWinnerInCol(char[][] board) {
-			// TODO
+			boolean hasWinnerInCurrentCheck;
 			
+			for (int columns = 0; columns < board.length; columns++) {
+				hasWinnerInCurrentCheck = true;
+				for (int rows = 1; rows < board.length && hasWinnerInCurrentCheck; rows++) {
+					if (board[rows][columns] != board[0][columns] || board[rows][columns] == NO_PLAYER)
+						hasWinnerInCurrentCheck = false;
+				}
+
+				if (hasWinnerInCurrentCheck) {
+					if (board[0][columns] == PLAYER_1_SIGN)
+						return GAME_STATUS_WINNER_PLAYER_1;
+					else
+						return GAME_STATUS_WINNER_PLAYER_2;
+				}
+			}
 			return GAME_STATUS_NO_RESULT_YET;
 		}
-
+		
 		public static int checkIfWinnerInMainDiagonal(char[][] board) {
-			// TODO
-
+			boolean hasWinnerInCurrentCheck = true;
+			
+			for (int columns = 1, rows=1 ; columns < board.length && hasWinnerInCurrentCheck ; columns++, rows++) {
+					if (board[rows][columns] != board[0][0] || board[rows][columns] == NO_PLAYER)
+						hasWinnerInCurrentCheck = false;
+			}	
+			if (hasWinnerInCurrentCheck) {
+				if (board[0][0] == PLAYER_1_SIGN)
+					return GAME_STATUS_WINNER_PLAYER_1;
+				else
+					return GAME_STATUS_WINNER_PLAYER_2;
+			}
 			return GAME_STATUS_NO_RESULT_YET;
 		}
 
 		public static int checkIfWinnerInSecondaryDiagonal(char[][] board) {
-			// TODO
-
+			boolean hasWinnerInCurrentCheck = true;
+			
+			for (int columns = 1, rows=1 ; columns < board.length && hasWinnerInCurrentCheck ; columns++, rows--) {
+					if (board[rows][columns] != board[2][0] || board[rows][columns] == NO_PLAYER)
+						hasWinnerInCurrentCheck = false;
+			}	
+			if (hasWinnerInCurrentCheck) {
+				if (board[2][0] == PLAYER_1_SIGN)
+					return GAME_STATUS_WINNER_PLAYER_1;
+				else
+					return GAME_STATUS_WINNER_PLAYER_2;
+			}
+			
 			return GAME_STATUS_NO_RESULT_YET;
 		}
 	}
