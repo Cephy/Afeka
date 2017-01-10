@@ -1,4 +1,4 @@
-package word_assignment3_workspace1;
+package word_assignment3_final;
 
 import javax.swing.JOptionPane;
 

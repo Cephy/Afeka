@@ -1,4 +1,4 @@
-package word_assignment3;
+package word_assignment3_workspace1;
 
 public class Ch5_q14 {
 
