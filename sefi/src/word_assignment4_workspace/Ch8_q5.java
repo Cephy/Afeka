@@ -1,4 +1,4 @@
-package word_assignment4;
+package word_assignment4_workspace;
 
 import java.util.Scanner;
 
@@ -22,6 +22,7 @@ public class Ch8_q5 {
 		sortArraySnake(numbers);
 		
 		printArray2(numbers);
+		s.close();
 	}
 	public static void sortArraySnake(int[][] numbers){
 	boolean limitFlag = true, sortCheckFlag=true;
