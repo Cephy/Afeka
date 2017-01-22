@@ -21,7 +21,7 @@ public class Ch8_q5 {
 		}
 		sortArraySnake(numbers);
 		
-		printArray(numbers);
+		printArray2(numbers);
 	}
 	public static void sortArraySnake(int[][] numbers){
 	boolean limitFlag = true, sortCheckFlag=true;
@@ -52,7 +52,7 @@ public class Ch8_q5 {
 		numbers[(row1+1)==numbers.length?column1+1:column1][(row1+1)==numbers.length?0:row1+1] = temp;
 	}
 	
-	public static void printArray (int[][] numbers){
+	public static void printArray2 (int[][] numbers){
 		for (int column=0 ; column<numbers.length ; column++){
 			for (int row=0 ; row<numbers.length ; row++){
 				System.out.printf("(%d)\t", numbers[column][row]);

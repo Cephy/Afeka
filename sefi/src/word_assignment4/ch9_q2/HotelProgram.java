@@ -45,8 +45,10 @@ public class HotelProgram {
 			switch(menu){
 				case ADD_NEW_GUESTS:{
 					int size;
+					
 					System.out.println("for how many guests you need to find a room? ");
 					size = s.nextInt();
+					
 					Guest[] guests = new Guest[size];
 					
 					for (int i=0 ; i<size ; i++){
@@ -75,7 +77,7 @@ public class HotelProgram {
 					break;
 				}
 				case LEAST_GUEST:{
-					System.out.printf("floor number %d has the most available rooms \n",hotel.mostEmptyFloor());
+					System.out.printf("floor number %d has the most available rooms \n\n",hotel.mostEmptyFloor());
 					break;
 				}
 				case SAVE:{

@@ -60,5 +60,8 @@ public class Lecturer {
 		pw.println(favoriteIceCream);
 		pw.println(id);
 	}
+	public String toString (){			
+		return "name:" + name + "number of pen falls:" + numOfPenFalls + "favorite Ice Cream" + favoriteIceCream + "ID:" + id;
+	}
 
 }

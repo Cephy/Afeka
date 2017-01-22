@@ -41,13 +41,13 @@ public class ch8_q4 {
 			for (int j=numbers.length-1 ; j>0 ; j--){
 				for (int column=0 ; column<j ; column++){
 					if(numbers[column][row]>numbers[column+1][row]){
-						swapNumbers (numbers, column,row);
+						swapNumbers2 (numbers, column,row);
 					}
 				}
 			}
 		}	
 	}
-	public static void swapNumbers (int[][] numbers, int columnLocation, int rowLocation){
+	public static void swapNumbers2 (int[][] numbers, int columnLocation, int rowLocation){
 	int temp = numbers[columnLocation][rowLocation];
 	numbers[columnLocation][rowLocation] = numbers[columnLocation+1][rowLocation];
 	numbers[columnLocation+1][rowLocation] = temp; 

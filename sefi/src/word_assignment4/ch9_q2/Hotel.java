@@ -81,7 +81,7 @@ public class Hotel {
 		return -1;
 	}
 	public int mostEmptyFloor (){
-		int floorSum=numOfRooms, minFloor, answer=-1, temp=0;
+		int floorSum=numOfRooms, answer=-1, temp=0;
 		for(int floor=0 ; floor<numOfFloors ; floor++){
 			temp=0;
 			for (int room=0 ; room<numOfRooms ; room++){

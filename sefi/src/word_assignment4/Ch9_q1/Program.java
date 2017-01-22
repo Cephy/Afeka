@@ -82,6 +82,7 @@ public class Program {
 					break;
 				}
 			}
-		}while(ifContinue);		
+		}while(ifContinue);
+		s.close();
 	}
 }

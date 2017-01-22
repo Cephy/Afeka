@@ -4,7 +4,8 @@ import java.io.PrintWriter;
 import java.util.*;
 
 public class Room {
-
+	
+	private final int MAX_NUM_OF_BEDS = 4, MIN_NUM_OF_BEDS = 1; 
 	private int numOfBeds;
 	private Guest[] allGuests;
 	private boolean isRoomFull=false;
@@ -43,8 +44,14 @@ public class Room {
 		}		
 	}
 	
-	public void setNumOfBeds (int numOfBeds){
-		this.numOfBeds = numOfBeds;
+	public boolean setNumOfBeds (int numOfBeds){
+		if (numOfBeds>MAX_NUM_OF_BEDS || numOfBeds < MIN_NUM_OF_BEDS){
+			return false;
+		}
+		else{
+			this.numOfBeds = numOfBeds;
+			return true;
+		}
 	}
 	
 	public int getNumOfBeds (){

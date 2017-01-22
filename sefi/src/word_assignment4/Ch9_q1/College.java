@@ -17,7 +17,7 @@ public class College {
 		
 	}
 	
-	public College (String name,int maxNumOfLecturers){
+	public College (String name ,int maxNumOfLecturers){
 		this.name = name;
 		this.maxNumOfLecturers = maxNumOfLecturers;
 		lecturers = new Lecturer[maxNumOfLecturers];
