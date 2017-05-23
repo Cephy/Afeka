@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/image/correct.jpg</name>
+			<type>1</type>
+			<location>D:/Alcatraz/Afeka/מונחה עצמים/חומר ההרצאות/sources/chapter12/image/correct.jpg</location>
+		</link>
+	</linkedResources>
 </projectDescription>
