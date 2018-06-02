@@ -1,4 +1,4 @@
-package simester1B.practice7.Q1;
+package simester1B.practice7;
 
 import java.util.ArrayList;
 

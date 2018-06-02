@@ -1,8 +1,8 @@
-package simester1B.practice7.Q1;
+package simester1B.practice7;
 
 public class Programe {
 	
-	public static void main(String[] args){
+	public static void main (String[] args){
 		
 		ProductController pC = new ProductController();
 		Product temp1 = new Product("Cheese", 10);

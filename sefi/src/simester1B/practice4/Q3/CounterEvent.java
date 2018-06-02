@@ -15,6 +15,5 @@ public class CounterEvent extends EventObject {
 	
 	public int getCounter(){
 		return counter;
-	}
-	
+	}	
 }
